@@ -32,9 +32,9 @@ public class RatingController {
 	@RequestMapping(method=RequestMethod.PUT, value="{id}")
 	public Rating updateRating(@PathVariable String id, @RequestBody Rating rating) {
 	    Rating update = repository.findOne(id);
-	    update.setMid(rating.getMid());
+	    update.setMovieId(rating.getMovieId());
 	    update.setRating(rating.getRating());
-	    update.setUid(rating.getUid());
+	    update.setUserId(rating.getUserId());
 	    return repository.save(update);
 	}	
 	

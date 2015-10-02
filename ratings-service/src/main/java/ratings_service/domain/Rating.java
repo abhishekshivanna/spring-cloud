@@ -33,20 +33,20 @@ public class Rating {
 		this.id = id;
 	}
 
-	public String getUid() {
+	public String getUserId() {
 		return userId;
 	}
 
-	public void setUid(String uid) {
-		this.userId = uid;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 
-	public String getMid() {
+	public String getMovieId() {
 		return movieId;
 	}
 
-	public void setMid(String mid) {
-		this.movieId = mid;
+	public void setMovieId(String movieId) {
+		this.movieId = movieId;
 	}
 
 	public int getRating() {
@@ -56,4 +56,6 @@ public class Rating {
 	public void setRating(int rating) {
 		this.rating = rating;
 	}
+
+	
 }

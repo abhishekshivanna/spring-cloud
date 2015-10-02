@@ -33,9 +33,9 @@ public class RatingIntegrationService {
 
     private List<Rating> stubRating(String mID) {
         Rating rating = new Rating();
-        rating.setMid(mID);
+        rating.setMovieId(mID);
         rating.setRating(3);
-        rating.setUid("1");
+        rating.setUserId("1");
         return Arrays.asList(rating);
     }
 }
