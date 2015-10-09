@@ -19,7 +19,7 @@ import com.netflix.discovery.DiscoveryClient;
 @RestController
 public class ImageController {
 
-	private static final String PATH = "/Users/mayank/Downloads/Practicum/sample/spring-cloud/image-service/";
+	private static final String PATH = "/home/ubuntu/images";
 
 	@Autowired
 	DiscoveryClient discoveryClient;
