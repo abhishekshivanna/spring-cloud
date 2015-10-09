@@ -14,6 +14,8 @@ import api_gateway.services.images.ImageIntegrationService;
 import api_gateway.services.movie.MovieIntegrationService;
 import api_gateway.services.ratings.RatingIntegrationService;
 
+import api_gateway.services.similar_movie.SimilarMovieIntegrationService;
+
 @RestController
 @RequestMapping("/movie")
 public class GatewayController {
@@ -27,17 +29,22 @@ public class GatewayController {
     @Autowired
     ImageIntegrationService imageIntegrationService;
     
+    @Autowired
+    SimilarMovieIntegrationService similarMovieIntegrationService;
+    
     @RequestMapping(value="{mID}", method=RequestMethod.GET)
     public DeferredResult<MovieDetails> getMovieDetails(@PathVariable String mID) {
         Observable<MovieDetails> details = Observable.zip(
         		movieIntegrationService.getMovie(mID),
         		ratingIntegrationService.ratingFor(mID),
         		imageIntegrationService.imageFor(mID),
-        		
-                (movie, ratings, image) -> {
+
+        		similarMovieIntegrationService.getSimilarMovie(mID),
+                (movie, ratings, similars, image) -> {
                     MovieDetails movieDetails = new MovieDetails();
                     movieDetails.setMovie(movie);
                     movieDetails.setRatings(ratings);
+                    movieDetails.setSimilars(similars);
                     movieDetails.setImage(image);
                     return movieDetails;
                 }

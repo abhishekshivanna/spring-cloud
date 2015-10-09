@@ -1,0 +1,4 @@
+similar_movie_service/controller/SimilarMovieController.class
+similar_movie_service/domain/SimilarMovie.class
+similar_movie_service/SimilarMovieService.class
+similar_movie_service/domain/SimilarMovieRepository.class
