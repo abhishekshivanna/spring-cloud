@@ -10,6 +10,7 @@ import org.springframework.web.context.request.async.DeferredResult;
 import api_gateway.models.MovieDetails;
 import api_gateway.services.movie.MovieIntegrationService;
 import api_gateway.services.ratings.RatingIntegrationService;
+import api_gateway.services.search.MovieSearchIntegrationService;
 import rx.Observable;
 import rx.Observer;
 
@@ -22,6 +23,9 @@ public class GatewayController {
 
     @Autowired
     RatingIntegrationService ratingIntegrationService;
+    
+    @Autowired
+    MovieSearchIntegrationService movieSearchIntegrationService;
 
     
     @RequestMapping(value="{mID}", method=RequestMethod.GET)
@@ -29,15 +33,21 @@ public class GatewayController {
         Observable<MovieDetails> details = Observable.zip(
         		movieIntegrationService.getMovie(mID),
         		ratingIntegrationService.ratingFor(mID),
-                (movie, ratings) -> {
+        		movieSearchIntegrationService.getMovieSearch(mID),
+                (movie, ratings, movieSearch) -> {
                     MovieDetails movieDetails = new MovieDetails();
                     movieDetails.setMovie(movie);
                     movieDetails.setRatings(ratings);
+                    movieDetails.setMovieSearch(movieSearch);
                     return movieDetails;
                 }
         );
         return toDeferredResult(details);
     }
+    
+    
+    
+    
 
     public DeferredResult<MovieDetails> toDeferredResult(Observable<MovieDetails> details) {
         DeferredResult<MovieDetails> result = new DeferredResult<>();

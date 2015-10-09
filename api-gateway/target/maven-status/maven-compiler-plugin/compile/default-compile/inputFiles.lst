@@ -1,0 +1,9 @@
+/Users/Ricky/Documents/CMU/Courses/2015Fall/practicum/services/spring-cloud/api-gateway/src/main/java/api_gateway/services/ratings/RatingIntegrationService.java
+/Users/Ricky/Documents/CMU/Courses/2015Fall/practicum/services/spring-cloud/api-gateway/src/main/java/api_gateway/ApiGatewayApplication.java
+/Users/Ricky/Documents/CMU/Courses/2015Fall/practicum/services/spring-cloud/api-gateway/src/main/java/api_gateway/services/movie/MovieIntegrationService.java
+/Users/Ricky/Documents/CMU/Courses/2015Fall/practicum/services/spring-cloud/api-gateway/src/main/java/api_gateway/services/search/models/MovieSearch.java
+/Users/Ricky/Documents/CMU/Courses/2015Fall/practicum/services/spring-cloud/api-gateway/src/main/java/api_gateway/services/search/MovieSearchIntegrationService.java
+/Users/Ricky/Documents/CMU/Courses/2015Fall/practicum/services/spring-cloud/api-gateway/src/main/java/api_gateway/controller/GatewayController.java
+/Users/Ricky/Documents/CMU/Courses/2015Fall/practicum/services/spring-cloud/api-gateway/src/main/java/api_gateway/models/MovieDetails.java
+/Users/Ricky/Documents/CMU/Courses/2015Fall/practicum/services/spring-cloud/api-gateway/src/main/java/api_gateway/services/movie/models/Movie.java
+/Users/Ricky/Documents/CMU/Courses/2015Fall/practicum/services/spring-cloud/api-gateway/src/main/java/api_gateway/services/ratings/models/Rating.java

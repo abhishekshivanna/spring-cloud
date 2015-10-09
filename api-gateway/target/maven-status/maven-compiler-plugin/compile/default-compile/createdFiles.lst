@@ -1,0 +1,14 @@
+api_gateway/services/movie/MovieIntegrationService$1.class
+api_gateway/services/movie/MovieIntegrationService.class
+api_gateway/services/ratings/RatingIntegrationService$1.class
+api_gateway/ApiGatewayApplication.class
+api_gateway/services/movie/models/Movie.class
+api_gateway/services/ratings/RatingIntegrationService$1$1.class
+api_gateway/services/ratings/models/Rating.class
+api_gateway/controller/GatewayController$1.class
+api_gateway/services/search/MovieSearchIntegrationService$1.class
+api_gateway/services/search/MovieSearchIntegrationService.class
+api_gateway/services/ratings/RatingIntegrationService.class
+api_gateway/controller/GatewayController.class
+api_gateway/services/search/models/MovieSearch.class
+api_gateway/models/MovieDetails.class
