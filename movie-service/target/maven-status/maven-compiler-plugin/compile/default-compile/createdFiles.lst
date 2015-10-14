@@ -1,4 +1,4 @@
 movie_service/domain/Movie.class
 movie_service/controller/MovieController.class
-movie_service/domain/MovieRepository.class
 movie_service/MovieServiceApplication.class
+movie_service/domain/MovieRepository.class
