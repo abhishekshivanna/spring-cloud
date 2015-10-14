@@ -1,5 +1,0 @@
-frontend_service/FrontendServiceApplication.class
-frontend_service/controller/FrontendController.class
-frontend_service/models/Movie.class
-frontend_service/models/MovieDetails.class
-frontend_service/models/Rating.class
